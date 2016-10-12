@@ -32,10 +32,10 @@ RUN set -ex \
     && apt-get update && apt-get install -y --no-install-recommends \
         docker-engine \
     # \
-    # Clean up after apt
+    # Clean up after apt \
     && rm -rf /var/lib/apt/lists/* \
     # \
-    # Install Compose
+    # Install Compose \
     && curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose \
     # \

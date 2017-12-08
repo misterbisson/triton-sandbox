@@ -18,7 +18,7 @@ RUN set -ex \
     && rm -rf /var/lib/apt/lists/* \
     && ln -s /usr/bin/nodejs /usr/bin/node \
     && npm install -g triton manta json \
-    && bash -c 'curl -o /usr/local/bin/triton-docker https://raw.githubusercontent.com/joyent/triton-docker-cli/master/triton-docker \
+    && curl -o /usr/local/bin/triton-docker https://raw.githubusercontent.com/joyent/triton-docker-cli/master/triton-docker \
     && chmod +x /usr/local/bin/triton-docker \
     && ln -Fs /usr/local/bin/triton-docker /usr/local/bin/triton-compose \
     && ln -Fs /usr/local/bin/triton-docker /usr/local/bin/triton-docker-install
